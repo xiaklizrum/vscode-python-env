@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  python-env:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ~/.gitconfig:/root/.gitconfig
+      - ..:/workspace
+    command: sleep infinity
